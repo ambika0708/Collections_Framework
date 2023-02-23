@@ -7,38 +7,48 @@ import java.util.ListIterator;
 
 public class CursorDemo {
     public static void main(String[] args) {
-        LinkedList l = new LinkedList();
-        l.add("hi");
-        l.add(1);
-        l.add('a');
-        System.out.println("Before Insertion: " + l);
-        ListIterator o = l.listIterator();
-        while (o.hasNext()) {
-            if (o.next().equals(1))
-                o.set("Ambika");
-            //System.out.println(x.next());
-            //x.remove();
-        }
-        System.out.println("After Insertion: " + l);
-        Iterator x = l.iterator();
+         public static void main(String[] args) {
+        LinkedList<Integer> ll = new LinkedList<Integer>();
+        ll.add(10);
+        ll.add(55);
+        ll.add(100);
+        ll.add(76);
+        ll.add(67);
+        ll.add(10);
+        // USING ITERATOR --> INTERFACE --> ONLY FORWARD DIRECTIONAL
+        Iterator x = ll.iterator();
+        System.out.println("PRINTING FIRST ELEMENT: " + x.next());
+        System.out.println("looping using hasnext() ");
         while (x.hasNext()) {
-            if (x.next().equals(1))
+            System.out.print(x.next() + " ");
+            //System.out.println(x.hashCode());
+        }
+        System.out.println();
+        System.out.println("Removing Particular index position");
+        while (x.hasNext()) {
+            if (x.next().equals(76))
                 x.remove();
-            //System.out.println(x.next());
-            //x.remove();
         }
-        /*System.out.println(l);
-        for (Object newNames : l){
-            System.out.println(newNames);
+        /*//LIST ITERATOR --> BIDIRECTIONAL
+        System.out.println(ll);
+        ListIterator<Integer> y =ll.listIterator();
+        while(y.hasNext()){
+            if(y.next().equals(100)){
+                y.remove();
+            }
         }
-        LinkedList<String> str=new LinkedList<String>();
-        str.add("hello");
-        str.add("hi");
-        str.add("welcome");
-        System.out.println(str);
-        for(String output : str){
-            System.out.println(output);
-        }*/
+        System.out.println(ll);
+        y.set(10000);
+        System.out.println(ll);
+        while(y.hasPrevious()){
+            if(y.previous().equals(10)){
+                y.remove();
+            }
+        }
+        System.out.println(ll);*/
+
+    }
+
 
     }
 }
