@@ -22,6 +22,25 @@ public class LinkedListDemo {
         for (Object o :output){
             System.out.print(o+" ");
         }
+        //LINKEDLIST SPECIFIC METHODS
+        ll.addFirst("A");
+        ll.addLast("Z");
+        System.out.println(ll);
+        System.out.println(ll.getFirst());
+        System.out.println(ll.getLast());
+        ll.poll();
+        System.out.println(ll);
+        ll.pollLast();
+        System.out.println(ll);
+        ll.removeLast();
+        System.out.println(ll);
+        ll.offer("1000");
+        System.out.println(ll);
+        ll.offerLast(200);
+        System.out.println(ll);
+        ll.offerFirst(200);
+        System.out.println(ll);
+
 
     }
 }
